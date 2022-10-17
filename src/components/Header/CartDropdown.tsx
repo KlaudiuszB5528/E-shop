@@ -3,7 +3,6 @@ import CartDropdownItemsList from "./CartDropdownItemsList";
 import { clearCart } from "../../store/cartSlice";
 import { formatPrice } from "../../utils/helpers";
 import { BsX } from "react-icons/bs";
-import { useEffect } from "react";
 interface Props {
   isOpen: boolean;
   onClose: (isOpen: boolean) => void;
@@ -17,12 +16,9 @@ const CartDropdown = (props: Props) => {
     (state) => state.persisted.cart.totalQuantity
   );
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "unset";
-  }, [isOpen]);
   return (
     <div
-      className={`fixed top-0 right-0 z-50 flex h-screen w-screen translate-x-[130%] flex-col items-center  justify-center rounded-lg bg-white  p-2 pt-20 shadow-2xl transition-all duration-700 ease-in-out md:w-96 ${
+      className={`fixed top-0 right-0 z-50 flex max-h-screen min-h-[75%] w-screen translate-x-[130%] flex-col items-center  justify-center rounded-lg bg-white  p-2 pt-20 shadow-2xl transition-all duration-700 ease-in-out md:h-screen md:w-96 ${
         isOpen ? "transform-none" : ""
       }`}
     >
@@ -46,7 +42,7 @@ const CartDropdown = (props: Props) => {
             className="absolute top-2 left-2 cursor-pointer text-3xl text-gray-400 hover:text-gray-600"
           />
           <CartDropdownItemsList />
-          <div className="mb-16 mt-auto flex w-full items-center justify-between md:mb-0">
+          <div className="mt-auto flex w-full items-center justify-between">
             <span className="text-xl">{`Total:${formatPrice(
               totalPrice
             )}`}</span>
