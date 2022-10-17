@@ -15,7 +15,7 @@ const BackToTopButton = () => {
   }, []);
   return (
     <button
-      className={`fixed bottom-3 right-3 z-30 lg:z-50  ${
+      className={`fixed bottom-3 right-3 z-30 lg:z-40  ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

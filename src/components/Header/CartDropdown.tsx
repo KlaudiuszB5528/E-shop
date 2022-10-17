@@ -46,7 +46,7 @@ const CartDropdown = (props: Props) => {
             className="absolute top-2 left-2 cursor-pointer text-3xl text-gray-400 hover:text-gray-600"
           />
           <CartDropdownItemsList />
-          <div className="mt-auto flex w-full items-center justify-between">
+          <div className="mb-16 mt-auto flex w-full items-center justify-between md:mb-0">
             <span className="text-xl">{`Total:${formatPrice(
               totalPrice
             )}`}</span>
