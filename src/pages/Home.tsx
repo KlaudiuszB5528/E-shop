@@ -1,17 +1,19 @@
 import Slider from "../components/Main/Slider";
 import { Link } from "react-router-dom";
-
+import img1 from "../assets/img1.jpg";
+import img2 from "../assets/img2.jpg";
+import img3 from "../assets/img3.jpg";
 const images = [
   {
-    url: "/src/assets/img1.jpg",
+    url: img1,
     alt: "clothes",
   },
   {
-    url: "/src/assets/img2.jpg",
+    url: img2,
     alt: "clothes",
   },
   {
-    url: "/src/assets/img3.jpg",
+    url: img3,
     alt: "clothes",
   },
 ];
