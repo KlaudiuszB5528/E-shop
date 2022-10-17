@@ -47,7 +47,7 @@ const ProductDetails = () => {
     );
   const { title, image, price, description } = product;
   return (
-    <div className="relative mx-auto flex flex-col justify-center gap-2 overflow-y-hidden py-10 px-20 lg:h-[75vh] lg:flex-row">
+    <div className="relative mx-auto flex flex-col justify-center gap-2 overflow-y-hidden py-10 px-4 md:px-20 lg:h-[75vh] lg:flex-row">
       <BsArrowLeft
         className="absolute top-4 left-4 cursor-pointer text-4xl text-gray-400 hover:text-gray-600"
         onClick={() => {
@@ -57,7 +57,7 @@ const ProductDetails = () => {
       <img
         src={image}
         alt={title}
-        className="h-1/2 w-full object-contain lg:h-full lg:w-1/2"
+        className="max-w-screen h-1/2 object-contain sm:w-full lg:h-full lg:w-1/2"
       />
       <div className="flex h-full flex-col gap-4 lg:w-1/2">
         <h3 className="mt-4 text-center text-xl font-bold lg:mt-0 lg:text-3xl">
