@@ -20,15 +20,16 @@ const ProductCard = (props: Props) => {
     >
       <Link
         to={`/products/${id}`}
-        className="absolute top-6 right-6 cursor-pointer text-4xl text-gray-400 hover:text-gray-600"
+        className="flex h-3/4 w-3/4 items-center justify-center"
       >
-        <BsSearch />
+        <img
+          src={image}
+          alt={title}
+          className="object-fill mix-blend-multiply"
+        />
       </Link>
-      <img
-        src={image}
-        alt={title}
-        className="h-3/4 w-3/4 object-fill mix-blend-multiply"
-      />
+      <BsSearch className="absolute top-4 right-4 text-3xl" />
+
       <h3 className="text-center">{title}</h3>
       <p>{formatPrice(price)}</p>
       <button
