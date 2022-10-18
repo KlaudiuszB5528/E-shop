@@ -47,7 +47,7 @@ const ProductDetails = () => {
     );
   const { title, image, price, description } = product;
   return (
-    <div className="relative mx-auto flex flex-col justify-center gap-2 overflow-y-hidden py-10 px-4 dark:text-mgray md:px-20 lg:h-[75vh] lg:flex-row">
+    <div className="relative mx-auto flex flex-col justify-center gap-2 overflow-y-hidden py-10 px-4 dark:rounded-lg dark:bg-mgray dark:text-charcoal md:px-20 lg:h-[75vh] lg:flex-row">
       <BsArrowLeft
         className="absolute top-4 left-4 cursor-pointer text-4xl text-gray-400 hover:text-gray-600 dark:text-mgray dark:hover:text-white"
         onClick={() => {
@@ -69,7 +69,7 @@ const ProductDetails = () => {
             Price:{formatPrice(price)}
           </span>
           <button
-            className="flex items-center justify-center gap-2 rounded-md border-2 border-black p-2 transition-all duration-200 hover:-translate-y-1 hover:bg-black hover:text-white hover:shadow-[0_1rem_2rem_rgba(0,0,0,0.5)] active:translate-y-0 active:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.6)] dark:border-mgray dark:hover:bg-mgray dark:hover:text-charcoal "
+            className="flex items-center justify-center gap-2 rounded-md border-2 border-black p-2 transition-all duration-200 hover:-translate-y-1 hover:bg-black hover:text-white hover:shadow-[0_1rem_2rem_rgba(0,0,0,0.5)] active:translate-y-0 active:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.6)] dark:border-charcoal dark:hover:bg-charcoal dark:hover:text-mgray "
             onClick={() =>
               dispatch(addToCart({ id: title, price, photoURL: image }))
             }
