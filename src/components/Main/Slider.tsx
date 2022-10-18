@@ -39,7 +39,7 @@ const Slider = (props: Props) => {
   return (
     <div className="mx-auto h-full w-full lg:h-3/4 lg:w-3/4">
       <div
-        className={`relative mt-6 h-full w-full rounded-xl bg-cover  bg-center shadow-lg xl:w-3/4`}
+        className={`relative mt-6 h-full w-full rounded-xl bg-cover  bg-center shadow-lg 2xl:w-3/4`}
         style={{ backgroundImage: `url(${currentImage})` }}
         aria-label="slider img"
       >

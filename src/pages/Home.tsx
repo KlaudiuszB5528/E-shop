@@ -21,10 +21,10 @@ const images = [
 const Home: React.FC = () => {
   return (
     <div className="flex h-screen w-screen flex-col lg:flex-row">
-      <div className="basis-1/2 lg:order-2 lg:basis-2/3 xl:basis-3/4">
+      <div className="basis-1/2 lg:order-2 lg:basis-2/3 2xl:basis-3/4">
         <Slider images={images} />
       </div>
-      <div className="flex basis-1/2 flex-col items-center justify-start gap-12 px-6 pt-20 lg:order-1 lg:basis-1/3 xl:basis-1/4 xl:gap-20 xl:pt-32">
+      <div className="flex basis-1/2 flex-col items-center justify-start gap-12 px-6 pt-20 lg:order-1 lg:basis-1/3 xl:basis-1/4 2xl:gap-20 2xl:pt-32">
         <h2 className="text-center text-3xl lg:text-5xl">
           Looking for the best online shop?
         </h2>
