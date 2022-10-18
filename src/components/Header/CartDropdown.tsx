@@ -18,7 +18,7 @@ const CartDropdown = (props: Props) => {
 
   return (
     <div
-      className={`fixed top-0 right-0 z-50 flex max-h-screen min-h-[75%] w-screen translate-x-[130%] flex-col items-center  justify-center rounded-lg bg-white  p-2 pt-20 shadow-2xl transition-all duration-700 ease-in-out md:h-screen md:w-96 ${
+      className={`fixed top-0 right-0 z-50 flex max-h-[80vh] min-h-[50%] w-screen translate-x-[130%] flex-col items-center  justify-center rounded-lg bg-white  p-2 pt-14 shadow-2xl transition-all duration-700 ease-in-out md:h-screen md:w-96 md:pt-20 ${
         isOpen ? "transform-none" : ""
       }`}
     >
