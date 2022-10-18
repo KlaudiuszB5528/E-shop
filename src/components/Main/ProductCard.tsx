@@ -3,16 +3,32 @@ import { useAppDispatch } from "../../hooks/redux";
 import { addToCart } from "../../store/cartSlice";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../../utils/helpers";
+
+interface ImgToShow {
+  url: string;
+  alt: string;
+}
 interface Props {
   id: number;
   title: string;
   image: string;
   price: number;
+  setIsModalOpen: (isModalOpen: boolean) => void;
+  setImgToShow: (imgToShow: ImgToShow) => void;
 }
 
 const ProductCard = (props: Props) => {
   const dispatch = useAppDispatch();
   const { id, title, image, price } = props;
+  const { setIsModalOpen, setImgToShow } = props;
+
+  const showProductHandle = () => {
+    setIsModalOpen(true);
+    setImgToShow({
+      url: image,
+      alt: title,
+    });
+  };
   return (
     <li
       className="relative flex flex-col items-center justify-center gap-6 rounded-lg bg-gray-50 p-2 shadow-md dark:bg-mgray dark:text-charcoal
@@ -28,7 +44,10 @@ const ProductCard = (props: Props) => {
           className="object-fill mix-blend-multiply"
         />
       </Link>
-      <BsSearch className="absolute top-4 right-4 text-3xl" />
+      <BsSearch
+        className="absolute top-2 right-2 text-3xl text-gray-400 hover:text-gray-600 dark:text-charcoal dark:hover:text-gray-900 md:top-4 md:right-4"
+        onClick={showProductHandle}
+      />
 
       <h3 className="text-center">{title}</h3>
       <p>{formatPrice(price)}</p>
