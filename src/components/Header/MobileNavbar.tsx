@@ -21,7 +21,7 @@ const MobileNavbar = () => {
     <>
       <MobileHamburger isOpen={isOpen} setIsOpen={setIsOpen} />
       <div
-        className={`fixed inset-0 z-30 h-screen -translate-y-full bg-white opacity-100 transition-all duration-700 lg:hidden ${
+        className={`fixed inset-0 z-30 h-screen -translate-y-full bg-white opacity-100 transition-all duration-700 dark:bg-charcoal lg:hidden ${
           isOpen ? "translate-y-0" : ""
         }`}
       >

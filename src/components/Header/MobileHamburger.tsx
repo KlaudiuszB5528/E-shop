@@ -15,7 +15,7 @@ const MobileHamburger: React.FC<Props> = (props) => {
       after:-translate-y-2 after:bg-black after:transition-all after:duration-500 dark:bg-mgray before:dark:bg-mgray after:dark:bg-mgray
       ${
         isOpen
-          ? "-translate-x-full bg-transparent before:translate-y-0 before:translate-x-8 before:rotate-45 after:translate-y-0 after:translate-x-8 after:-rotate-45"
+          ? "-translate-x-full bg-transparent before:translate-y-0 before:translate-x-8 before:rotate-45 after:translate-y-0 after:translate-x-8 after:-rotate-45 dark:bg-transparent"
           : ""
       }`}
       ></div>

@@ -12,7 +12,7 @@ const MobileNav: React.FC<Props> = (props) => {
         <li>
           <Link
             to="/"
-            className="text-center text-5xl font-bold"
+            className="text-center text-5xl font-bold dark:text-mgray"
             onClick={() => setIsOpen(false)}
           >
             Home
@@ -21,7 +21,7 @@ const MobileNav: React.FC<Props> = (props) => {
         <li>
           <Link
             to="/products"
-            className="text-center text-5xl font-bold"
+            className="text-center text-5xl font-bold dark:text-mgray"
             onClick={() => setIsOpen(false)}
           >
             Products
@@ -30,7 +30,7 @@ const MobileNav: React.FC<Props> = (props) => {
         <li>
           <Link
             to="/contact"
-            className="text-center text-5xl font-bold"
+            className="text-center text-5xl font-bold dark:text-mgray"
             onClick={() => setIsOpen(false)}
           >
             Contact
