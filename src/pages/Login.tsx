@@ -1,6 +1,6 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useEffect, useState } from "react";
 import { UserContext } from "../context/userContext";
-import login from "../assets/login.jpg";
+import login from "../assets/login.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { BiArrowBack } from "react-icons/bi";
@@ -17,6 +17,7 @@ import { UserCart } from "../store/userCartSlice";
 
 const Login = () => {
   const dispatch = useAppDispatch();
+  const [hideButton, setHideButton] = useState(false);
   const { updateUserContext } = useContext(UserContext);
   const navigate = useNavigate();
   const emailRef = useRef<HTMLInputElement>(null);
@@ -27,6 +28,16 @@ const Login = () => {
   const persistedUserCartItems = useAppSelector(
     (state) => state.persisted.userCart.userCartItems
   );
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerHeight < 450) {
+        setHideButton(true);
+      } else setHideButton(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleUserCartItems = (items: UserCart["userCartItems"]) => {
     Object.entries(items).forEach(([key, value]) => {
@@ -102,7 +113,10 @@ const Login = () => {
         className="hidden h-screen w-2/3  object-cover md:block"
       />
       <button className="fixed top-2 right-4">
-        <Link to="/" className="flex items-center gap-2 ">
+        <Link
+          to="/"
+          className={`flex items-center gap-2 ${hideButton ? "hidden" : ""}`}
+        >
           <BiArrowBack className="text-lg text-black dark:text-mgray" />
           <span className="text-black dark:text-mgray">
             Back to the Homepage

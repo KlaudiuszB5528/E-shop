@@ -1,6 +1,6 @@
 import React from "react";
-import signup from "../assets/signup.jpg";
-import { useState } from "react";
+import signup from "../assets/signup.webp";
+import { useState, useEffect } from "react";
 import { BiArrowBack } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import {
@@ -13,7 +13,18 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
+  const [hideButton, setHideButton] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerHeight < 450) {
+        setHideButton(true);
+      } else setHideButton(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const signUpHandle = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,7 +58,10 @@ const SignUp = () => {
         className="hidden h-screen w-2/3 object-cover md:block"
       />
       <button className="fixed top-2 right-4">
-        <Link to="/" className="flex items-center gap-2">
+        <Link
+          to="/"
+          className={`flex items-center gap-2 ${hideButton ? "hidden" : ""}`}
+        >
           <BiArrowBack className="text-lg text-black dark:text-mgray" />
           <span className="text-black dark:text-mgray">
             Back to the Homepage
