@@ -28,7 +28,7 @@ const Layout: React.FC = () => {
       <Navbar />
       <main
         id="main"
-        className="mx-auto flex items-center justify-center  dark:bg-[#121212] dark:text-white"
+        className="mx-auto flex items-center justify-center  dark:bg-charcoal dark:text-mgray"
       >
         <Outlet />
       </main>

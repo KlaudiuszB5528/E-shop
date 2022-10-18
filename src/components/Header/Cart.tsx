@@ -27,9 +27,9 @@ const Cart = () => {
     <>
       <div className="flex cursor-pointer flex-col items-center">
         <div className="relative" onClick={() => setIsCartOpen(!isCartOpen)}>
-          <FiShoppingCart className="text-3xl" />
+          <FiShoppingCart className="text-3xl dark:text-mgray" />
           <span
-            className={`absolute -top-2.5 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-black p-2 text-sm text-white ${
+            className={`absolute -top-2.5 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-black p-2 text-sm text-white dark:bg-mgray dark:text-charcoal ${
               isAnimated ? "animate-pop" : ""
             }`}
           >

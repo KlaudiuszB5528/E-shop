@@ -17,12 +17,12 @@ const User: React.FC = () => {
     userContext.displayName === "" ? (
       <button>
         <Link to="/login" className="">
-          <FiUserPlus className="text-3xl" />
+          <FiUserPlus className="text-3xl dark:text-mgray" />
         </Link>
       </button>
     ) : (
       <div className="flex items-center gap-2">
-        <span className="text-md hidden tracking-wide text-gray-600 lg:block ">{`Hello,${userContext.displayName}`}</span>
+        <span className="text-md hidden tracking-wide text-gray-600 dark:text-mgray lg:block ">{`Hello,${userContext.displayName}`}</span>
         <UserPhoto
           isUserOpen={isUserOpen}
           setIsUserOpen={setIsUserOpen}

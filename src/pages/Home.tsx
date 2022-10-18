@@ -30,10 +30,10 @@ const Home: React.FC = () => {
           Looking for the best online shop?
         </h2>
         <p className="text-xl">Look no further, you've found it!</p>
-        <button className="group relative mb-4 rounded-md border-2 border-black py-4 px-6 text-2xl shadow-md transition-all duration-300 before:absolute before:top-0 before:left-0 before:h-0 before:w-0 before:rounded-sm before:bg-black before:transition-all before:duration-300 hover:-translate-y-1 hover:shadow-xl before:hover:h-full before:hover:w-full active:-translate-y-0 active:shadow-sm md:mb-0">
+        <button className="group relative mb-4 rounded-md border-2 border-black py-4 px-6 text-2xl shadow-md transition-all duration-300 before:absolute before:top-0 before:left-0 before:h-0 before:w-0 before:rounded-sm before:bg-black before:transition-all before:duration-300 hover:-translate-y-1 hover:shadow-xl before:hover:h-full before:hover:w-full active:-translate-y-0 active:shadow-sm dark:border-mgray dark:before:bg-mgray  md:mb-0">
           <Link
             to="/products"
-            className="relative z-10 transition-all duration-300 group-hover:text-white"
+            className="relative z-10 transition-all duration-300 group-hover:text-white dark:group-hover:text-charcoal"
           >
             Check our products
           </Link>

@@ -41,15 +41,15 @@ const ProductDetails = () => {
   if (!product) return <div className="h-screen"></div>;
   if (productNotFound)
     return (
-      <h2 className="-mt-20 flex h-screen items-center justify-center text-6xl">
+      <h2 className="-mt-20 flex h-screen items-center justify-center text-6xl dark:text-mgray">
         Product not found
       </h2>
     );
   const { title, image, price, description } = product;
   return (
-    <div className="relative mx-auto flex flex-col justify-center gap-2 overflow-y-hidden py-10 px-4 md:px-20 lg:h-[75vh] lg:flex-row">
+    <div className="relative mx-auto flex flex-col justify-center gap-2 overflow-y-hidden py-10 px-4 dark:text-mgray md:px-20 lg:h-[75vh] lg:flex-row">
       <BsArrowLeft
-        className="absolute top-4 left-4 cursor-pointer text-4xl text-gray-400 hover:text-gray-600"
+        className="absolute top-4 left-4 cursor-pointer text-4xl text-gray-400 hover:text-gray-600 dark:text-mgray dark:hover:text-white"
         onClick={() => {
           navigate(-1);
         }}
@@ -57,7 +57,7 @@ const ProductDetails = () => {
       <img
         src={image}
         alt={title}
-        className="max-w-screen h-1/2 object-contain sm:w-full lg:h-full lg:w-1/2"
+        className="max-w-screen h-1/2 object-contain mix-blend-multiply sm:w-full lg:h-full lg:w-1/2"
       />
       <div className="flex h-full flex-col gap-4 lg:w-1/2">
         <h3 className="mt-4 text-center text-xl font-bold lg:mt-0 lg:text-3xl">
@@ -69,7 +69,7 @@ const ProductDetails = () => {
             Price:{formatPrice(price)}
           </span>
           <button
-            className="flex items-center justify-center gap-2 rounded-md border-2 border-black p-2 transition-all duration-200 hover:-translate-y-1 hover:bg-black hover:text-white hover:shadow-[0_1rem_2rem_rgba(0,0,0,0.5)] active:translate-y-0 active:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.6)] dark:hover:bg-white dark:hover:text-black "
+            className="flex items-center justify-center gap-2 rounded-md border-2 border-black p-2 transition-all duration-200 hover:-translate-y-1 hover:bg-black hover:text-white hover:shadow-[0_1rem_2rem_rgba(0,0,0,0.5)] active:translate-y-0 active:shadow-[0_0.5rem_1rem_rgba(0,0,0,0.6)] dark:border-mgray dark:hover:bg-mgray dark:hover:text-charcoal "
             onClick={() =>
               dispatch(addToCart({ id: title, price, photoURL: image }))
             }

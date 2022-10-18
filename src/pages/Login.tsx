@@ -95,16 +95,18 @@ const Login = () => {
   };
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center ">
+    <div className="flex h-screen w-screen items-center justify-center dark:text-mgray ">
       <img
         src={login}
         alt="background"
         className="hidden h-screen w-2/3  object-cover md:block"
       />
       <button className="fixed top-2 right-4">
-        <Link to="/" className="flex items-center gap-2">
-          <BiArrowBack className="text-lg text-black" />
-          <span className="text-black">Back to the Homepage</span>
+        <Link to="/" className="flex items-center gap-2 ">
+          <BiArrowBack className="text-lg text-black dark:text-mgray" />
+          <span className="text-black dark:text-mgray">
+            Back to the Homepage
+          </span>
         </Link>
       </button>
       <div className="container flex h-full flex-col items-center justify-center gap-4 py-10 lg:w-1/3">
@@ -113,22 +115,24 @@ const Login = () => {
           className=" flex w-full flex-col items-center gap-6"
           onSubmit={logUser}
         >
-          <h2 className="text-2xl text-black">Log in to Your account</h2>
+          <h2 className="text-2xl text-black dark:text-mgray">
+            Log in to Your account
+          </h2>
           <input
             type="text"
             placeholder="Email"
             required
-            className="mt-2 w-3/4 rounded-md border-2 border-transparent bg-gray-200 p-2 outline-none placeholder:text-gray-500 focus:border-gray-300"
+            className="mt-2 w-3/4 rounded-md border-2 border-transparent bg-gray-200 p-2 outline-none placeholder:text-gray-500 focus:border-gray-300 dark:bg-mgray dark:placeholder:text-charcoal dark:focus:border-black"
             ref={emailRef}
           />
           <input
             type="password"
             placeholder="Password"
-            className="w-3/4 rounded-md border-2 border-transparent bg-gray-200 p-2 outline-none placeholder:text-gray-500 focus:border-gray-300"
+            className="w-3/4 rounded-md border-2 border-transparent bg-gray-200 p-2 outline-none placeholder:text-gray-500 focus:border-gray-300 dark:bg-mgray dark:placeholder:text-charcoal dark:focus:border-black"
             ref={passwordRef}
             required
           />
-          <button className="w-3/4 rounded-md border border-black bg-white py-1 px-2 text-center uppercase hover:bg-black hover:text-white ">
+          <button className="w-3/4 rounded-md border border-black bg-white py-1 px-2 text-center uppercase hover:bg-black hover:text-white dark:border-mgray dark:bg-charcoal dark:text-mgray dark:hover:bg-mgray dark:hover:text-charcoal">
             Login
           </button>
         </form>
@@ -139,7 +143,7 @@ const Login = () => {
         </div>
         <button
           onClick={logGoogleUser}
-          className="flex w-3/4 items-center justify-center gap-2 rounded-lg border border-black bg-white py-1 px-2 text-lg hover:bg-black hover:text-white lg:gap-4"
+          className="flex w-3/4 items-center justify-center gap-2 rounded-lg border border-black bg-white py-1 px-2 text-lg hover:bg-black hover:text-white dark:border-mgray dark:bg-charcoal dark:text-mgray dark:hover:bg-mgray dark:hover:text-charcoal lg:gap-4"
         >
           <FcGoogle className="text-3xl" />
           <span className="flex items-center">Log in with Google</span>

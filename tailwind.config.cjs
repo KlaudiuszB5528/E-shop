@@ -7,6 +7,10 @@ module.exports = {
       screens: {
         "3xl": "1650px",
       },
+      colors: {
+        charcoal: "#36454F",
+        mgray: "#dddddd",
+      },
       fontFamily: {
         sans: ["Oswald", "sans-serif"],
       },

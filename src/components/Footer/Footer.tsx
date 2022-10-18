@@ -4,7 +4,7 @@ type Props = {};
 
 const Footer: React.FC = (props: Props) => {
   return (
-    <footer className="mt-auto flex w-full items-center justify-center gap-1 text-gray-500">
+    <footer className="mt-auto flex w-full items-center justify-center gap-1 text-gray-500 dark:text-mgray">
       <p>{`© ${new Date().getFullYear()} E-shop by KBiegacz`}</p>
       <a href="https://github.com/KlaudiuszB5528" target="blank">
         <AiFillGithub className="cursor-pointer text-lg"></AiFillGithub>

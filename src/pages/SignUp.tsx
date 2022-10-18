@@ -48,8 +48,10 @@ const SignUp = () => {
       />
       <button className="fixed top-2 right-4">
         <Link to="/" className="flex items-center gap-2">
-          <BiArrowBack className="text-lg text-black" />
-          <span className="text-black">Back to the Homepage</span>
+          <BiArrowBack className="text-lg text-black dark:text-mgray" />
+          <span className="text-black dark:text-mgray">
+            Back to the Homepage
+          </span>
         </Link>
       </button>
       <div className="container flex h-full w-full flex-col items-center justify-center gap-4 py-10 lg:w-1/3">
@@ -58,7 +60,9 @@ const SignUp = () => {
           className=" flex w-full flex-col items-center gap-6"
           onSubmit={signUpHandle}
         >
-          <h2 className="text-center text-2xl text-black">Create an account</h2>
+          <h2 className="text-center text-2xl text-black dark:text-mgray">
+            Create an account
+          </h2>
           <input
             type="text"
             placeholder="Username"
@@ -83,7 +87,7 @@ const SignUp = () => {
             value={password}
             className={inputClassess}
           />
-          <button className="w-3/4 rounded-md border border-black bg-white p-2 py-2 px-4 text-center uppercase hover:bg-black hover:text-white lg:w-1/2">
+          <button className="w-3/4 rounded-md border border-black bg-white p-2 py-2 px-4 text-center uppercase hover:bg-black hover:text-white dark:border-mgray dark:bg-charcoal dark:text-mgray dark:hover:bg-mgray dark:hover:text-charcoal lg:w-1/2">
             Sign Up
           </button>
         </form>

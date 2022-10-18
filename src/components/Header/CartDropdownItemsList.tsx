@@ -10,11 +10,14 @@ const CartDropdownItemsList = () => {
     <ul className="flex max-h-[90%] w-full flex-col gap-12 overflow-y-auto overscroll-contain">
       {Object.entries(cartItems).map(([key, value], index) => {
         return (
-          <li key={index} className="flex w-[95%] justify-between">
+          <li
+            key={index}
+            className="flex w-[95%] justify-between dark:rounded-md dark:bg-mgray dark:p-2"
+          >
             <img
               src={value.photoURL}
               alt={key}
-              className="h-20 w-20 object-contain"
+              className="h-20 w-20 bg-none object-contain mix-blend-multiply"
             />
             <div className="text-md flex w-36 items-center justify-center text-center">
               <span className="inline-block truncate">{key}</span>

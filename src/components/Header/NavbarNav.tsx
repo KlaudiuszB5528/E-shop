@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 
 const NavLinkClasses: string =
-  "p-2 text-gray-600 hover:text-gray-900 text-2xl border-b-2 border-transparent";
+  "p-2 text-gray-600 hover:text-gray-900 text-2xl border-b-2 border-transparent dark:text-mgray dark:hover:text-white";
 const ActiveNavLinkClasses: string =
-  "p-2 text-gray-900 text-2xl w-100 border-b-2 border-gray-900";
+  "p-2 text-gray-900 text-2xl w-100 border-b-2 border-gray-900 dark:text-white dark:border-white";
 
 const NavbarNav: React.FC = () => {
   return (
