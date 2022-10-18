@@ -3,7 +3,6 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { addToCart } from "../../store/cartSlice";
 import { formatPrice } from "../../utils/helpers";
 import { BsCartPlus, BsArrowLeft } from "react-icons/bs";
-import { BiArrowBack } from "react-icons/bi";
 import { useEffect, useState } from "react";
 import { Product } from "../../store/productsSlice";
 
@@ -49,7 +48,7 @@ const ProductDetails = () => {
   return (
     <div className="relative mx-auto flex flex-col justify-center gap-2 overflow-y-hidden py-10 px-4 dark:rounded-lg dark:bg-mgray dark:text-charcoal md:px-20 lg:h-[75vh] lg:flex-row">
       <BsArrowLeft
-        className="absolute top-4 left-4 cursor-pointer text-4xl text-gray-400 hover:text-gray-600 dark:text-mgray dark:hover:text-white"
+        className="absolute top-4 left-4 cursor-pointer text-4xl text-gray-400 hover:text-gray-600 dark:text-charcoal"
         onClick={() => {
           navigate(-1);
         }}
