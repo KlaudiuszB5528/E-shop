@@ -8,7 +8,7 @@ const MobileNav: React.FC<Props> = (props) => {
   const { setIsOpen } = props;
   return (
     <div className="container h-full px-8">
-      <ul className="flex h-full w-full flex-col items-center justify-center gap-24">
+      <ul className="flex h-[90%] w-full flex-col items-center justify-center gap-24">
         <li>
           <Link
             to="/"
