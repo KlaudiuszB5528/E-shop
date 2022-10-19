@@ -48,7 +48,7 @@ const SignUp = () => {
   };
 
   const inputClassess =
-    "w-3/4 bg-gray-200 rounded-md p-2 placeholder:text-gray-500 outline-none border-2 border-transparent focus:border-gray-300";
+    "w-3/4 bg-gray-200 rounded-md p-2 placeholder:text-gray-500 outline-none border-2 border-transparent focus:border-gray-300 dark:text-charcoal";
 
   return (
     <div className="flex h-screen w-screen items-center justify-center">

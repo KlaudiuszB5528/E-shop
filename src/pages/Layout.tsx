@@ -24,7 +24,7 @@ const Layout: React.FC = () => {
       : document.documentElement.classList.remove("dark");
   }, [isDarkMode]);
   return (
-    <div className="container mx-auto flex min-h-screen flex-col">
+    <div className="container mx-auto flex flex-col">
       <Navbar />
       <main
         id="main"
