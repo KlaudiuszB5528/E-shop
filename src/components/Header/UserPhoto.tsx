@@ -35,7 +35,7 @@ const UserPhoto: React.FC<Props> = (props) => {
     ) : (
       <div className="relative">
         <FaUserCircle
-          className="cursor-pointer text-3xl"
+          className="cursor-pointer text-3xl dark:text-mgray"
           onClick={() => setIsUserOpen(!isUserOpen)}
         />
         {isUserOpen && (
