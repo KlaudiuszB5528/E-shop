@@ -81,6 +81,7 @@ const SignUp = () => {
             type="text"
             placeholder="Username"
             value={displayName}
+            maxLength={25}
             onChange={(e) => setDisplayName(e.target.value)}
             required
             className={inputClassess}

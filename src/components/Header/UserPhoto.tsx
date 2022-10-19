@@ -41,7 +41,7 @@ const UserPhoto: React.FC<Props> = (props) => {
         {isUserOpen && (
           <button
             onClick={handleSignOut}
-            className="absolute -left-5 bottom-1 flex h-12 w-20 translate-y-full items-center justify-center p-2 text-black shadow-sm"
+            className="absolute -left-5 bottom-1 flex h-12 w-20 translate-y-full items-center justify-center p-2 text-black shadow-sm dark:text-mgray"
           >
             Log out
           </button>
