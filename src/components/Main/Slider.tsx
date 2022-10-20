@@ -37,7 +37,7 @@ const Slider = (props: Props) => {
   }, [currentIndex]);
 
   return (
-    <div className="mx-auto h-full w-full lg:h-3/4 lg:w-3/4">
+    <div className="mx-auto h-full w-full lg:h-3/4 lg:w-3/4 landscape:w-5/6">
       <div
         className={`relative mt-6 h-full w-full rounded-xl bg-cover bg-center shadow-lg 3xl:w-3/4`}
         style={{ backgroundImage: `url(${currentImage})` }}

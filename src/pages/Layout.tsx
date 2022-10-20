@@ -23,6 +23,7 @@ const Layout: React.FC = () => {
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark");
   }, [isDarkMode]);
+
   return (
     <div className="container mx-auto flex flex-col">
       <Navbar />
