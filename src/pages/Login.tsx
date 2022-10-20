@@ -18,7 +18,7 @@ import { UserCart } from "../store/userCartSlice";
 const Login = () => {
   const dispatch = useAppDispatch();
   const [hideButton, setHideButton] = useState(false);
-  const { updateUserContext } = useContext(UserContext);
+  const { updateUserContext, userContext } = useContext(UserContext);
   const navigate = useNavigate();
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
@@ -105,6 +105,12 @@ const Login = () => {
     navigate("/");
   };
 
+  useEffect(() => {
+    if (userContext.displayName !== "") {
+      navigate("/");
+    }
+  }, [userContext]);
+
   return (
     <div className="flex h-screen w-screen items-center justify-center dark:text-mgray ">
       <img
@@ -136,13 +142,14 @@ const Login = () => {
             type="text"
             placeholder="Email"
             required
-            className="mt-2 w-3/4 rounded-md border-2 border-transparent bg-gray-200 p-2 outline-none placeholder:text-gray-500 focus:border-gray-300 dark:bg-mgray dark:placeholder:text-charcoal dark:focus:border-black"
+            className="mt-2 w-3/4 rounded-md border-2 border-transparent
+             bg-gray-200 p-2 outline-none placeholder:text-gray-500 focus:border-gray-300 dark:bg-mgray dark:text-charcoal dark:placeholder:text-charcoal dark:focus:border-black"
             ref={emailRef}
           />
           <input
             type="password"
             placeholder="Password"
-            className="w-3/4 rounded-md border-2 border-transparent bg-gray-200 p-2 outline-none placeholder:text-gray-500 focus:border-gray-300 dark:bg-mgray dark:placeholder:text-charcoal dark:focus:border-black"
+            className="w-3/4 rounded-md border-2 border-transparent bg-gray-200 p-2 outline-none placeholder:text-gray-500 focus:border-gray-300 dark:bg-mgray dark:text-charcoal dark:placeholder:text-charcoal dark:focus:border-black"
             ref={passwordRef}
             required
           />
